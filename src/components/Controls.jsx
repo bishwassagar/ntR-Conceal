@@ -14,11 +14,11 @@ function Controls() {
             <div className='flex space-x-20'> 
             <Link
                 activeClass="active"
-                to="About" // Provide the ID of the element to scroll to
+                to="encryption" // Provide the ID of the element to scroll to
                 spy={true}
                 smooth={true}
                 offset={0} // Adjust the offset according to your layout
-                duration={400} // Duration of the scrolling animation in milliseconds
+                duration={850} // Duration of the scrolling animation in milliseconds
             >
                 <button className="bg-white w-36 h-12 rounded-md border-2 border-[#333] cursor-pointer relative group hover:bg-[#333] transition duration-300 ease-in hover:-translate-x-2 hover:translate-y-2 object-bottom">
                     <h1 className="group-hover:text-white text-[#333] font-bold">
@@ -31,11 +31,11 @@ function Controls() {
             </Link>
             <Link
                 activeClass="active"
-                to="About" // Provide the ID of the element to scroll to
+                to="decryption" // Provide the ID of the element to scroll to
                 spy={true}
                 smooth={true}
                 offset={0} // Adjust the offset according to your layout
-                duration={400} // Duration of the scrolling animation in milliseconds
+                duration={1700} // Duration of the scrolling animation in milliseconds
             >
                 <button className="bg-white w-36 h-12 rounded-md border-2 border-[#333] cursor-pointer relative group hover:bg-[#333] transition duration-300 ease-in hover:-translate-x-2 hover:translate-y-2 object-bottom">
                     <h1 className="group-hover:text-white text-[#333] font-bold">
