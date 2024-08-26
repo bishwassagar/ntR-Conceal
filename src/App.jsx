@@ -1,54 +1,68 @@
+import { Link } from 'react-router-dom';
+import { FaLock, FaUnlock, FaInfoCircle, FaUserShield, FaCode, FaHeart } from 'react-icons/fa';
 import "./App.css";
-import { Link } from "react-scroll";
 
 function App() {
-
   return (
-    <div id="home" className="flex flex-col items-center justify-center h-screen">
-    <div className="loader"></div>
-    <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-        ntR-Conceal
-    </h1>
-    <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">
-    ntR-Conceal is your trusted solution for securing your files through encryption. Keep your sensitive data safe and concealed from prying eyes.
-    </p>
-    <div className='flex space-x-20'> 
-    <Link
-        activeClass="active"
-        to="encryption" // Provide the ID of the element to scroll to
-        spy={true}
-        smooth={true}
-        offset={0} // Adjust the offset according to your layout
-        duration={850} // Duration of the scrolling animation in milliseconds
-    >
-        <button className="bg-white w-36 h-12 rounded-md border-2 border-[#333] cursor-pointer relative group hover:bg-[#333] transition duration-300 ease-in hover:-translate-x-2 hover:translate-y-2 object-bottom">
-            <h1 className="group-hover:text-white text-[#333] font-bold">
-            Encrypt Files!
-            </h1>
-            <div className="rounded-md group-hover:border-0 w-36 h-12 border-2 border-[#333] absolute top-1 -left-2 -z-10">
-                <div className="rounded-md group-hover:border-0 w-36 h-12 border-2 border-[#333] absolute top-1 -left-2 -z-10"></div>
-            </div>
-        </button>
-    </Link>
-    <Link
-        activeClass="active"
-        to="decryption" // Provide the ID of the element to scroll to
-        spy={true}
-        smooth={true}
-        offset={0} // Adjust the offset according to your layout
-        duration={1700} // Duration of the scrolling animation in milliseconds
-    >
-        <button className="bg-white w-36 h-12 rounded-md border-2 border-[#333] cursor-pointer relative group hover:bg-[#333] transition duration-300 ease-in hover:-translate-x-2 hover:translate-y-2 object-bottom">
-            <h1 className="group-hover:text-white text-[#333] font-bold">
-                Decrypt Files!
-            </h1>
-            <div className="rounded-md group-hover:border-0 w-36 h-12 border-2 border-[#333] absolute top-1 -left-2 -z-10">
-                <div className="rounded-md group-hover:border-0 w-36 h-12 border-2 border-[#333] absolute top-1 -left-2 -z-10"></div>
-            </div>
-        </button>
-    </Link>
+    <div id="home" className="min-h-screen bg-black text-green-500 flex flex-col items-center justify-between p-8 font-mono">
+      <div className="max-w-4xl w-full flex-grow">
+        <header className="text-center mb-12">
+          <h1 className="text-6xl font-bold mb-4 glitch-text">ntR-Conceal</h1>
+          <p className="text-xl text-green-400 px-4">
+            <span className="typing-animation break-words">Secure_your_files_with_advanced_encryption</span>
+          </p>
+        </header>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="border border-green-500 p-8 rounded-lg hover:bg-green-900 hover:bg-opacity-20 transition duration-300">
+            <h2 className="text-2xl font-semibold mb-4 flex items-center">
+              <FaLock className="mr-2" /> Encrypt
+            </h2>
+            <p className="mb-6">Protect your data from prying eyes.</p>
+            <Link to="/encryption" className="inline-block bg-green-500 text-black font-bold py-3 px-6 rounded hover:bg-green-400 transition duration-300">
+              [Encrypt_Files]
+            </Link>
+          </div>
+          <div className="border border-green-500 p-8 rounded-lg hover:bg-green-900 hover:bg-opacity-20 transition duration-300">
+            <h2 className="text-2xl font-semibold mb-4 flex items-center">
+              <FaUnlock className="mr-2" /> Decrypt
+            </h2>
+            <p className="mb-6">Retrieve your classified information.</p>
+            <Link to="/decryption" className="inline-block bg-green-500 text-black font-bold py-3 px-6 rounded hover:bg-green-400 transition duration-300">
+              [Decrypt_Files]
+            </Link>
+          </div>
+          <div className="border border-green-500 p-8 rounded-lg hover:bg-green-900 hover:bg-opacity-20 transition duration-300">
+            <h2 className="text-2xl font-semibold mb-4 flex items-center">
+              <FaInfoCircle className="mr-2" /> About
+            </h2>
+            <p className="mb-6">Learn more about ntR-Conceal and its features.</p>
+            <Link to="/about" className="inline-block bg-green-500 text-black font-bold py-3 px-6 rounded hover:bg-green-400 transition duration-300">
+              [About_Us]
+            </Link>
+          </div>
+          <div className="border border-green-500 p-8 rounded-lg hover:bg-green-900 hover:bg-opacity-20 transition duration-300">
+            <h2 className="text-2xl font-semibold mb-4 flex items-center">
+              <FaUserShield className="mr-2" /> Privacy Policy
+            </h2>
+            <p className="mb-6">Understand how we protect your data and privacy.</p>
+            <Link to="/privacy-policy" className="inline-block bg-green-500 text-black font-bold py-3 px-6 rounded hover:bg-green-400 transition duration-300">
+              [Privacy_Policy]
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <footer className="w-full max-w-4xl text-center mt-8 border-t border-green-500 pt-4">
+      <p className="mb-2">© {new Date().getFullYear()} ntR-Conceal. All rights reserved.</p>
+        <p className="flex items-center justify-center">
+          Made with <FaCode className="mx-1 text-green-400" /> and <FaHeart className="mx-1 text-green-400" /> by 
+          <a href="https://github.com/bishwassagar" target="_blank" rel="noopener noreferrer" className="ml-1 text-green-400 hover:text-green-300">
+            Bishwas Sagar
+          </a>
+        </p>
+      </footer>
     </div>
-</div>
   );
 }
 
