@@ -1,16 +1,18 @@
 # ntR-Conceal
 
-**ntR-Conceal** is your trusted solution for securing your files through encryption. Keep your sensitive data safe and concealed from prying eyes, all within a user-friendly offline interface.
+**ntR-Conceal** is a free, browser-based tool for AES encryption and decryption. It allows users to securely encrypt files directly in their browser without needing to download any software, ensuring data remains private and offline.
 
-## Features
+## Key Features
 
-- **File Encryption & Decryption**: Easily encrypt files with a `.ntrConceal` extension and decrypt them back to their original state.
-- **Offline Usage**: Operate without an internet connection, ensuring privacy.
-- **Privacy First**: No data tracking or logging.
+- **AES Encryption & Decryption**: Securely encrypt and decrypt files using Advanced Encryption Standard (AES) in your browser.
+- **Offline Usage**: Operate entirely within your browser without an internet connection.
+- **Privacy First**: No data tracking, logging, or external dependencies.
+
+![ntR-Conceal Preview](public/preview.png)
 
 ## Usage
 
-Access the live tool at [ntR-Conceal](https://ntr-conceal.vercel.app/) and start encrypting or decrypting your files.
+Visit [ntR-Conceal](https://ntr-conceal.vercel.app/) to start encrypting or decrypting your files with AES encryption.
 
 ## Contributing
 
@@ -22,4 +24,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or feedback, feel free to reach out via the repository's [issues page](https://github.com/bishwassagar/ntR-Conceal/issues).
+For questions or feedback, visit the [issues page](https://github.com/bishwassagar/ntR-Conceal/issues).
